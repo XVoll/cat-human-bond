@@ -1,4 +1,4 @@
-import { useState, useMemo, useRef } from 'react';
+import { useState, useMemo } from 'react';
 import { CATS, ACTORS } from './data';
 import './App.css';
 
@@ -80,14 +80,12 @@ function SectionHeader({ cat }) {
 }
 
 export default function App() {
-  const [view, setView] = useState('taxonomy'); // 'taxonomy' | 'examples'
   const [activeFilter, setActiveFilter] = useState('All');
   const [search, setSearch] = useState('');
   const [flagged, setFlagged] = useState(loadFlagged);
   const [showFlaggedOnly, setShowFlaggedOnly] = useState(false);
-  const [undoStack, setUndoStack] = useState(null); // saved set before clear
+  const [undoStack, setUndoStack] = useState(null);
   const [undoTimer, setUndoTimer] = useState(null);
-  const savedViewRef = useRef(null); // {view, activeFilter} captured at clear time
 
   const filterOptions = useMemo(
     () => ['All', ...CAT_ORDER.filter(c => c !== PRECEDENT_CAT)],
@@ -104,16 +102,11 @@ export default function App() {
   }
 
   const filtered = useMemo(() => {
-    let list = ACTORS;
+    let list = ACTORS.filter(a => a.c !== PRECEDENT_CAT);
     if (showFlaggedOnly) {
       return list.filter(a => flagged.has(a.n));
     }
-    if (view === 'examples') {
-      list = list.filter(a => a.c === PRECEDENT_CAT);
-    } else {
-      list = list.filter(a => a.c !== PRECEDENT_CAT);
-      if (activeFilter !== 'All') list = list.filter(a => a.c === activeFilter);
-    }
+    if (activeFilter !== 'All') list = list.filter(a => a.c === activeFilter);
     if (search.trim()) {
       const q = search.toLowerCase();
       list = list.filter(a =>
@@ -123,7 +116,7 @@ export default function App() {
       );
     }
     return list;
-  }, [view, activeFilter, search, flagged, showFlaggedOnly]);
+  }, [activeFilter, search, flagged, showFlaggedOnly]);
 
   const byCat = useMemo(() => {
     const map = {};
@@ -135,11 +128,9 @@ export default function App() {
   }, [filtered]);
 
   const taxonomyCount = ACTORS.filter(a => a.c !== PRECEDENT_CAT).length;
-  const examplesCount = ACTORS.filter(a => a.c === PRECEDENT_CAT).length;
   const flagCount = flagged.size;
 
   function clearAllFlags() {
-    savedViewRef.current = { view, activeFilter };
     setUndoStack(new Set(flagged));
     const cleared = new Set();
     setFlagged(cleared);
@@ -148,11 +139,6 @@ export default function App() {
     const t = setTimeout(() => {
       setUndoStack(null);
       setShowFlaggedOnly(false);
-      if (savedViewRef.current) {
-        setView(savedViewRef.current.view);
-        setActiveFilter(savedViewRef.current.activeFilter);
-        savedViewRef.current = null;
-      }
     }, 5000);
     setUndoTimer(t);
   }
@@ -162,16 +148,8 @@ export default function App() {
     setFlagged(undoStack);
     saveFlagged(undoStack);
     setUndoStack(null);
-    savedViewRef.current = null;
     if (undoTimer) clearTimeout(undoTimer);
     setUndoTimer(null);
-  }
-
-  function switchView(v) {
-    setView(v);
-    setActiveFilter('All');
-    setSearch('');
-    setShowFlaggedOnly(false);
   }
 
   return (
@@ -180,9 +158,9 @@ export default function App() {
         <div className="header-inner">
           <div className="header-text">
             <div className="header-eyebrow">CCHB · CAT–CASH–HUMANBOND PROTOCOL</div>
-            <h1 className="header-title">Ecosystem &amp; Deployed Solutions</h1>
+            <h1 className="header-title">Ecosystem</h1>
             <p className="header-sub">
-              {taxonomyCount} actors across {CAT_ORDER.length - 1} categories · {examplesCount} deployed solutions
+              {taxonomyCount} actors across {CAT_ORDER.filter(c => c !== PRECEDENT_CAT).length} categories
             </p>
           </div>
           <div className="stats-grid">
@@ -190,32 +168,13 @@ export default function App() {
               <div className="stat-n">{taxonomyCount}</div>
               <div className="stat-l">actors</div>
             </div>
-            <div className="stat-card">
-              <div className="stat-n">{examplesCount}</div>
-              <div className="stat-l">solutions</div>
-            </div>
           </div>
         </div>
       </header>
 
       <div className="controls">
         <div className="controls-inner">
-          <div className="view-tabs">
-            <button
-              className={`view-tab ${view === 'taxonomy' && !showFlaggedOnly ? 'view-tab--active' : ''}`}
-              onClick={() => switchView('taxonomy')}
-            >
-              Ecosystem
-            </button>
-            <button
-              className={`view-tab ${view === 'examples' && !showFlaggedOnly ? 'view-tab--active' : ''}`}
-              onClick={() => switchView('examples')}
-            >
-              Deployed Solutions
-            </button>
-          </div>
-
-          {!showFlaggedOnly && view === 'taxonomy' && (
+          {!showFlaggedOnly && (
             <div className="filter-wrap">
               {filterOptions.map(f => (
                 <button
@@ -296,10 +255,6 @@ export default function App() {
               </section>
             );
           })
-        ) : view === 'examples' ? (
-          <div className="actors-grid">
-            {filtered.map(a => <ActorCard key={a.n} actor={a} flagged={flagged} onToggleFlag={toggleFlag} />)}
-          </div>
         ) : (
           CAT_ORDER.filter(c => c !== PRECEDENT_CAT).map(cat => {
             const actors = byCat[cat];
