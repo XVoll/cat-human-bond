@@ -1,0 +1,23 @@
+{
+  "name": "stakeholders",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "predev": "node scripts/export-csv.mjs",
+    "dev": "vite --port 3841",
+    "prebuild": "node scripts/export-csv.mjs",
+    "build": "vite build",
+    "preview": "vite preview",
+    "export-csv": "node scripts/export-csv.mjs",
+    "import-csv": "node scripts/import-csv.mjs"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.4.0"
+  }
+}

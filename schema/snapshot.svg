@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 880" width="720" height="880">
+  <defs>
+    <linearGradient id="canvas-bg" x1="0" y1="0" x2="0.3" y2="1">
+      <stop offset="0%" stop-color="#F5F0E8"/>
+      <stop offset="100%" stop-color="#E5DDD0"/>
+    </linearGradient>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.2" fill="#B8B0A2" opacity="0.4"/>
+    </pattern>
+    
+  <marker id="arr-teal" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto">
+    <path d="M0,0.5 L0,6.5 L7,3.5 z" fill="#0D9488" opacity="0.82"/>
+  </marker>
+  <marker id="arr-indigo" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto">
+    <path d="M0,0.5 L0,6.5 L7,3.5 z" fill="#4338CA" opacity="0.82"/>
+  </marker>
+  <marker id="arr-amber" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto">
+    <path d="M0,0.5 L0,6.5 L7,3.5 z" fill="#B45309" opacity="0.82"/>
+  </marker>
+  <marker id="arr-violet" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto">
+    <path d="M0,0.5 L0,6.5 L7,3.5 z" fill="#7C3AED" opacity="0.82"/>
+  </marker>
+  <marker id="arr-rose" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto">
+    <path d="M0,0.5 L0,6.5 L7,3.5 z" fill="#BE123C" opacity="0.82"/>
+  </marker>
+  </defs>
+
+  <!-- Canvas -->
+  <rect width="720" height="880" fill="url(#canvas-bg)" rx="13"/>
+  <rect width="720" height="880" fill="url(#dots)" rx="13"/>
+
+  <!-- Financial structure zone -->
+  <rect x="176" y="266" width="540" height="496" rx="12"
+    fill="#F0FDFA" fill-opacity="0.35" stroke="#0D9488" stroke-opacity="0.12"
+    stroke-width="1" stroke-dasharray="6,4"/>
+  <text x="188" y="284" fill="#0D9488" opacity="0.4"
+    font-size="10" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif" letter-spacing="0.08em" font-weight="600">FINANCIAL STRUCTURE</text>
+
+  <!-- Payout chain zone -->
+  <rect x="4" y="20" width="534" height="460" rx="12"
+    fill="#FFF1F2" fill-opacity="0.5" stroke="#BE123C" stroke-opacity="0.15"
+    stroke-width="1" stroke-dasharray="6,4"/>
+  <text x="16" y="38" fill="#BE123C" opacity="0.38"
+    font-size="10" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif" letter-spacing="0.08em" font-weight="600">PAYOUT CHAIN</text>
+
+  <!-- Edges -->
+  
+  <path d="M 447 466 C 447 501, 360 501, 360 536" fill="none" stroke="#B45309" stroke-width="1.8" stroke-opacity="0.45"
+     marker-end="url(#arr-amber)"/>
+  <rect x="389.1" y="484" width="40.800000000000004" height="15" rx="4" fill="#FFFFFF" opacity="0.9"/>
+  <text x="409.5" y="494.5" text-anchor="middle" fill="#B45309"
+    font-size="8.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif" font-weight="600" opacity="0.9">Premium</text>
+  <path d="M 360 608 C 360 649, 267 649, 267 690" fill="none" stroke="#0D9488" stroke-width="1.8" stroke-opacity="0.45"
+     marker-end="url(#arr-teal)"/>
+  <rect x="294.7" y="632" width="49.6" height="15" rx="4" fill="#FFFFFF" opacity="0.9"/>
+  <text x="319.5" y="642.5" text-anchor="middle" fill="#0D9488"
+    font-size="8.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif" font-weight="600" opacity="0.9">Principal</text>
+  <path d="M 344 719 C 397 719, 397 719, 450 719" fill="none" stroke="#4338CA" stroke-width="1.8" stroke-opacity="0.45"
+    stroke-dasharray="5,4" marker-end="url(#arr-indigo)"/>
+  <rect x="370" y="702" width="54" height="15" rx="4" fill="#FFFFFF" opacity="0.9"/>
+  <text x="397" y="712.5" text-anchor="middle" fill="#4338CA"
+    font-size="8.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif" font-weight="600" opacity="0.9">Monitoring</text>
+  <path d="M 527 690 C 527 642, 625 642, 625 594" fill="none" stroke="#4338CA" stroke-width="1.8" stroke-opacity="0.45"
+     marker-end="url(#arr-indigo)"/>
+  <rect x="557.2" y="625" width="49.6" height="15" rx="4" fill="#FFFFFF" opacity="0.9"/>
+  <text x="582" y="635.5" text-anchor="middle" fill="#4338CA"
+    font-size="8.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif" font-weight="600" opacity="0.9">Data feed</text>
+  <path d="M 548 565 C 492.5 565, 492.5 572, 437 572" fill="none" stroke="#BE123C" stroke-width="1.8" stroke-opacity="0.45"
+     marker-end="url(#arr-rose)"/>
+  <rect x="450.1" y="551.5" width="84.80000000000001" height="15" rx="4" fill="#FFFFFF" opacity="0.9"/>
+  <text x="492.5" y="562" text-anchor="middle" fill="#BE123C"
+    font-size="8.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif" font-weight="600" opacity="0.9">Trigger confirmed</text>
+  <path d="M 360 536 C 360 437, 447 437, 447 338" fill="none" stroke="#B45309" stroke-width="1.8" stroke-opacity="0.45"
+     marker-end="url(#arr-amber)"/>
+  <rect x="378.1" y="420" width="62.800000000000004" height="15" rx="4" fill="#FFFFFF" opacity="0.9"/>
+  <text x="409.5" y="430.5" text-anchor="middle" fill="#B45309"
+    font-size="8.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif" font-weight="600" opacity="0.9">Notes issued</text>
+  <path d="M 437 572 C 492.5 572, 492.5 309, 548 309" fill="none" stroke="#7C3AED" stroke-width="1.8" stroke-opacity="0.45"
+     marker-end="url(#arr-violet)"/>
+  <rect x="458.9" y="423.5" width="67.2" height="15" rx="4" fill="#FFFFFF" opacity="0.9"/>
+  <text x="492.5" y="434" text-anchor="middle" fill="#7C3AED"
+    font-size="8.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif" font-weight="600" opacity="0.9">Tokens minted</text>
+  <path d="M 360 536 C 360 373, 447 373, 447 210" fill="none" stroke="#BE123C" stroke-width="1.8" stroke-opacity="0.45"
+    stroke-dasharray="5,4" marker-end="url(#arr-rose)"/>
+  <rect x="367.1" y="356" width="84.80000000000001" height="15" rx="4" fill="#FFFFFF" opacity="0.9"/>
+  <text x="409.5" y="366.5" text-anchor="middle" fill="#BE123C"
+    font-size="8.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif" font-weight="600" opacity="0.9">Payout on trigger</text>
+  <path d="M 370 181 C 357 181, 357 181, 344 181" fill="none" stroke="#BE123C" stroke-width="1.8" stroke-opacity="0.45"
+     marker-end="url(#arr-rose)"/>
+  <rect x="325.6" y="164" width="62.800000000000004" height="15" rx="4" fill="#FFFFFF" opacity="0.9"/>
+  <text x="357" y="174.5" text-anchor="middle" fill="#BE123C"
+    font-size="8.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif" font-weight="600" opacity="0.9">Disbursement</text>
+  <path d="M 190 181 C 181 181, 181 63, 172 63" fill="none" stroke="#BE123C" stroke-width="1.8" stroke-opacity="0.45"
+     marker-end="url(#arr-rose)"/>
+  <rect x="147.4" y="105" width="67.2" height="15" rx="4" fill="#FFFFFF" opacity="0.9"/>
+  <text x="181" y="115.5" text-anchor="middle" fill="#BE123C"
+    font-size="8.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif" font-weight="600" opacity="0.9">Mobile payout</text>
+  <path d="M 95 92 C 95 122, 95 122, 95 152" fill="none" stroke="#BE123C" stroke-width="1.8" stroke-opacity="0.45"
+     marker-end="url(#arr-rose)"/>
+  <rect x="78.4" y="105" width="45.2" height="15" rx="4" fill="#FFFFFF" opacity="0.9"/>
+  <text x="101" y="115.5" text-anchor="middle" fill="#BE123C"
+    font-size="8.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif" font-weight="600" opacity="0.9">Cash-out</text>
+  <path d="M 190 181 C 181 181, 181 181, 172 181" fill="none" stroke="#4338CA" stroke-width="1.8" stroke-opacity="0.45"
+    stroke-dasharray="5,4" marker-end="url(#arr-indigo)"/>
+  <rect x="147.4" y="164" width="67.2" height="15" rx="4" fill="#FFFFFF" opacity="0.9"/>
+  <text x="181" y="174.5" text-anchor="middle" fill="#4338CA"
+    font-size="8.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif" font-weight="600" opacity="0.9">Agent network</text>
+  <path d="M 95 210 C 95 245, 95 245, 95 280" fill="none" stroke="#4338CA" stroke-width="1.8" stroke-opacity="0.45"
+     marker-end="url(#arr-indigo)"/>
+  <rect x="69.6" y="228" width="62.800000000000004" height="15" rx="4" fill="#FFFFFF" opacity="0.9"/>
+  <text x="101" y="238.5" text-anchor="middle" fill="#4338CA"
+    font-size="8.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif" font-weight="600" opacity="0.9">E-float mgmt</text>
+  <path d="M 172 309 C 181 309, 181 309, 190 309" fill="none" stroke="#4338CA" stroke-width="1.8" stroke-opacity="0.45"
+     marker-end="url(#arr-indigo)"/>
+  <rect x="154" y="292" width="54" height="15" rx="4" fill="#FFFFFF" opacity="0.9"/>
+  <text x="181" y="302.5" text-anchor="middle" fill="#4338CA"
+    font-size="8.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif" font-weight="600" opacity="0.9">Settlement</text>
+  <path d="M 190 309 C 181 309, 181 437, 172 437" fill="none" stroke="#B45309" stroke-width="1.8" stroke-opacity="0.45"
+    stroke-dasharray="5,4" marker-end="url(#arr-amber)"/>
+  <rect x="156.2" y="356" width="49.6" height="15" rx="4" fill="#FFFFFF" opacity="0.9"/>
+  <text x="181" y="366.5" text-anchor="middle" fill="#B45309"
+    font-size="8.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif" font-weight="600" opacity="0.9">Oversight</text>
+
+  <!-- Nodes -->
+  
+  <g transform="translate(18,34)">
+    <filter id="sh-person">
+      <feDropShadow dx="0" dy="2" stdDeviation="3"
+        flood-color="#1C191714"/>
+    </filter>
+    <rect width="154" height="58" rx="10" fill="#FFFFFF" stroke="#D9D3C8"
+      stroke-width="1" filter="url(#sh-person)"/>
+    
+    <rect width="5" height="58" rx="10" fill="#BE123C" opacity="0.65"/>
+    <rect x="5" width="3" height="58" fill="#BE123C" opacity="0.08"/>
+    <text x="79.5" y="22" text-anchor="middle" fill="#1C1917"
+      font-size="12" font-family="Georgia, 'Times New Roman', serif" font-weight="700">Recipient</text>
+    <text x="79.5" y="39" text-anchor="middle" fill="#9C958C"
+      font-size="9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif">Person living in the affected area</text>
+    
+  </g>
+  <g transform="translate(18,152)">
+    <filter id="sh-mno_agent">
+      <feDropShadow dx="0" dy="2" stdDeviation="3"
+        flood-color="#1C191714"/>
+    </filter>
+    <rect width="154" height="58" rx="10" fill="#FFFFFF" stroke="#D9D3C8"
+      stroke-width="1" filter="url(#sh-mno_agent)"/>
+    
+    <rect width="5" height="58" rx="10" fill="#BE123C" opacity="0.65"/>
+    <rect x="5" width="3" height="58" fill="#BE123C" opacity="0.08"/>
+    <text x="79.5" y="22" text-anchor="middle" fill="#1C1917"
+      font-size="12" font-family="Georgia, 'Times New Roman', serif" font-weight="700">MNO Agent</text>
+    <text x="79.5" y="39" text-anchor="middle" fill="#9C958C"
+      font-size="9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif">Mobile money cash-out</text>
+    
+  </g>
+  <g transform="translate(190,152)">
+    <filter id="sh-mno">
+      <feDropShadow dx="0" dy="2" stdDeviation="3"
+        flood-color="#1C191714"/>
+    </filter>
+    <rect width="154" height="58" rx="10" fill="#FFFFFF" stroke="#D9D3C8"
+      stroke-width="1" filter="url(#sh-mno)"/>
+    
+    <rect width="5" height="58" rx="10" fill="#4338CA" opacity="0.65"/>
+    <rect x="5" width="3" height="58" fill="#4338CA" opacity="0.08"/>
+    <text x="79.5" y="22" text-anchor="middle" fill="#1C1917"
+      font-size="12" font-family="Georgia, 'Times New Roman', serif" font-weight="700">MNO</text>
+    <text x="79.5" y="39" text-anchor="middle" fill="#9C958C"
+      font-size="9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif">Mobile Network Operator</text>
+    
+  </g>
+  <g transform="translate(370,152)">
+    <filter id="sh-humanitarian">
+      <feDropShadow dx="0" dy="2" stdDeviation="3"
+        flood-color="#1C191714"/>
+    </filter>
+    <rect width="154" height="58" rx="10" fill="#FFFFFF" stroke="#D9D3C8"
+      stroke-width="1" filter="url(#sh-humanitarian)"/>
+    
+    <rect width="5" height="58" rx="10" fill="#BE123C" opacity="0.65"/>
+    <rect x="5" width="3" height="58" fill="#BE123C" opacity="0.08"/>
+    <text x="79.5" y="22" text-anchor="middle" fill="#1C1917"
+      font-size="12" font-family="Georgia, 'Times New Roman', serif" font-weight="700">Humanitarian Wallet</text>
+    <text x="79.5" y="39" text-anchor="middle" fill="#9C958C"
+      font-size="9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif">IFRC · WFP · Nat. Society</text>
+    
+  </g>
+  <g transform="translate(18,280)">
+    <filter id="sh-super_agent">
+      <feDropShadow dx="0" dy="2" stdDeviation="3"
+        flood-color="#1C191714"/>
+    </filter>
+    <rect width="154" height="58" rx="10" fill="#FFFFFF" stroke="#D9D3C8"
+      stroke-width="1" filter="url(#sh-super_agent)"/>
+    
+    <rect width="5" height="58" rx="10" fill="#4338CA" opacity="0.65"/>
+    <rect x="5" width="3" height="58" fill="#4338CA" opacity="0.08"/>
+    <text x="79.5" y="22" text-anchor="middle" fill="#1C1917"
+      font-size="12" font-family="Georgia, 'Times New Roman', serif" font-weight="700">Super Agent</text>
+    <text x="79.5" y="39" text-anchor="middle" fill="#9C958C"
+      font-size="9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif">Agent network manager</text>
+    
+  </g>
+  <g transform="translate(190,280)">
+    <filter id="sh-bank">
+      <feDropShadow dx="0" dy="2" stdDeviation="3"
+        flood-color="#1C191714"/>
+    </filter>
+    <rect width="154" height="58" rx="10" fill="#FFFFFF" stroke="#D9D3C8"
+      stroke-width="1" filter="url(#sh-bank)"/>
+    
+    <rect width="5" height="58" rx="10" fill="#4338CA" opacity="0.65"/>
+    <rect x="5" width="3" height="58" fill="#4338CA" opacity="0.08"/>
+    <text x="79.5" y="22" text-anchor="middle" fill="#1C1917"
+      font-size="12" font-family="Georgia, 'Times New Roman', serif" font-weight="700">Commercial Bank</text>
+    <text x="79.5" y="39" text-anchor="middle" fill="#9C958C"
+      font-size="9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif">Super agent settlement</text>
+    
+  </g>
+  <g transform="translate(370,280)">
+    <filter id="sh-fiat_investors">
+      <feDropShadow dx="0" dy="2" stdDeviation="3"
+        flood-color="#1C191714"/>
+    </filter>
+    <rect width="154" height="58" rx="10" fill="#FFFFFF" stroke="#D9D3C8"
+      stroke-width="1" filter="url(#sh-fiat_investors)"/>
+    
+    <rect width="5" height="58" rx="10" fill="#B45309" opacity="0.65"/>
+    <rect x="5" width="3" height="58" fill="#B45309" opacity="0.08"/>
+    <text x="79.5" y="22" text-anchor="middle" fill="#1C1917"
+      font-size="12" font-family="Georgia, 'Times New Roman', serif" font-weight="700">Fiat Tranche</text>
+    <text x="79.5" y="39" text-anchor="middle" fill="#9C958C"
+      font-size="9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif">ISIN/CUSIP · Min $100k</text>
+    
+  </g>
+  <g transform="translate(548,280)">
+    <filter id="sh-token_investors">
+      <feDropShadow dx="0" dy="2" stdDeviation="3"
+        flood-color="#1C191714"/>
+    </filter>
+    <rect width="154" height="58" rx="10" fill="#FFFFFF" stroke="#D9D3C8"
+      stroke-width="1" filter="url(#sh-token_investors)"/>
+    
+    <rect width="5" height="58" rx="10" fill="#7C3AED" opacity="0.65"/>
+    <rect x="5" width="3" height="58" fill="#7C3AED" opacity="0.08"/>
+    <text x="79.5" y="22" text-anchor="middle" fill="#1C1917"
+      font-size="12" font-family="Georgia, 'Times New Roman', serif" font-weight="700">Token Tranche</text>
+    <text x="79.5" y="39" text-anchor="middle" fill="#9C958C"
+      font-size="9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif">ERC-3643 · Min $100</text>
+    
+  </g>
+  <g transform="translate(18,408)">
+    <filter id="sh-central_bank">
+      <feDropShadow dx="0" dy="2" stdDeviation="3"
+        flood-color="#1C191714"/>
+    </filter>
+    <rect width="154" height="58" rx="10" fill="#FFFFFF" stroke="#D9D3C8"
+      stroke-width="1" filter="url(#sh-central_bank)"/>
+    
+    <rect width="5" height="58" rx="10" fill="#B45309" opacity="0.65"/>
+    <rect x="5" width="3" height="58" fill="#B45309" opacity="0.08"/>
+    <text x="79.5" y="22" text-anchor="middle" fill="#1C1917"
+      font-size="12" font-family="Georgia, 'Times New Roman', serif" font-weight="700">Central Bank</text>
+    <text x="79.5" y="39" text-anchor="middle" fill="#9C958C"
+      font-size="9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif">Regulator · Oversight</text>
+    
+  </g>
+  <g transform="translate(370,408)">
+    <filter id="sh-sponsors">
+      <feDropShadow dx="0" dy="2" stdDeviation="3"
+        flood-color="#1C191714"/>
+    </filter>
+    <rect width="154" height="58" rx="10" fill="#FFFFFF" stroke="#D9D3C8"
+      stroke-width="1" filter="url(#sh-sponsors)"/>
+    
+    <rect width="5" height="58" rx="10" fill="#B45309" opacity="0.65"/>
+    <rect x="5" width="3" height="58" fill="#B45309" opacity="0.08"/>
+    <text x="79.5" y="22" text-anchor="middle" fill="#1C1917"
+      font-size="12" font-family="Georgia, 'Times New Roman', serif" font-weight="700">Risk Sponsors</text>
+    <text x="79.5" y="39" text-anchor="middle" fill="#9C958C"
+      font-size="9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif">IFRC · World Bank · ODA</text>
+    
+  </g>
+  <g transform="translate(283,536)">
+    <filter id="sh-spv">
+      <feDropShadow dx="0" dy="5" stdDeviation="8"
+        flood-color="#0D948830"/>
+    </filter>
+    <rect width="154" height="72" rx="10" fill="#FFFFFF" stroke="#D9D3C8"
+      stroke-width="1" filter="url(#sh-spv)"/>
+    
+    <rect x="5" y="0" width="149" height="72" rx="10" fill="#0D9488" opacity="0.04"/>
+    <rect width="5" height="72" rx="10" fill="#0D9488" opacity="0.65"/>
+    <rect x="5" width="3" height="72" fill="#0D9488" opacity="0.08"/>
+    <text x="79.5" y="27" text-anchor="middle" fill="#1C1917"
+      font-size="14" font-family="Georgia, 'Times New Roman', serif" font-weight="700">SPV</text>
+    <text x="79.5" y="44" text-anchor="middle" fill="#9C958C"
+      font-size="9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif">Cayman · Bermuda</text>
+    
+    <text x="79.5" y="58" text-anchor="middle" fill="#0D9488"
+      font-size="7.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif" font-weight="600" letter-spacing="0.07em" opacity="0.5">CENTRAL ENTITY</text>
+  </g>
+  <g transform="translate(548,536)">
+    <filter id="sh-calcagent">
+      <feDropShadow dx="0" dy="2" stdDeviation="3"
+        flood-color="#1C191714"/>
+    </filter>
+    <rect width="154" height="58" rx="10" fill="#FFFFFF" stroke="#D9D3C8"
+      stroke-width="1" filter="url(#sh-calcagent)"/>
+    
+    <rect width="5" height="58" rx="10" fill="#4338CA" opacity="0.65"/>
+    <rect x="5" width="3" height="58" fill="#4338CA" opacity="0.08"/>
+    <text x="79.5" y="22" text-anchor="middle" fill="#1C1917"
+      font-size="12" font-family="Georgia, 'Times New Roman', serif" font-weight="700">Calculation Agent</text>
+    <text x="79.5" y="39" text-anchor="middle" fill="#9C958C"
+      font-size="9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif">Trigger certification</text>
+    
+  </g>
+  <g transform="translate(190,690)">
+    <filter id="sh-collateral">
+      <feDropShadow dx="0" dy="2" stdDeviation="3"
+        flood-color="#1C191714"/>
+    </filter>
+    <rect width="154" height="58" rx="10" fill="#FFFFFF" stroke="#D9D3C8"
+      stroke-width="1" filter="url(#sh-collateral)"/>
+    
+    <rect width="5" height="58" rx="10" fill="#0D9488" opacity="0.65"/>
+    <rect x="5" width="3" height="58" fill="#0D9488" opacity="0.08"/>
+    <text x="79.5" y="22" text-anchor="middle" fill="#1C1917"
+      font-size="12" font-family="Georgia, 'Times New Roman', serif" font-weight="700">Collateral Pool</text>
+    <text x="79.5" y="39" text-anchor="middle" fill="#9C958C"
+      font-size="9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif">T-Bills · Tokenized MMF</text>
+    
+  </g>
+  <g transform="translate(450,690)">
+    <filter id="sh-oracle">
+      <feDropShadow dx="0" dy="2" stdDeviation="3"
+        flood-color="#1C191714"/>
+    </filter>
+    <rect width="154" height="58" rx="10" fill="#FFFFFF" stroke="#D9D3C8"
+      stroke-width="1" filter="url(#sh-oracle)"/>
+    
+    <rect width="5" height="58" rx="10" fill="#4338CA" opacity="0.65"/>
+    <rect x="5" width="3" height="58" fill="#4338CA" opacity="0.08"/>
+    <text x="79.5" y="22" text-anchor="middle" fill="#1C1917"
+      font-size="12" font-family="Georgia, 'Times New Roman', serif" font-weight="700">Parametric Oracle</text>
+    <text x="79.5" y="39" text-anchor="middle" fill="#9C958C"
+      font-size="9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif">USGS · NOAA · Chainlink</text>
+    
+  </g>
+
+  <!-- Title bar -->
+  <rect x="0" y="846" width="720" height="34" fill="#FFFFFF" opacity="0.85" rx="13"/>
+  <text x="16" y="867" fill="#0D9488" font-size="11" font-family="Georgia, 'Times New Roman', serif"
+    font-weight="700">Dual-Rail Humanitarian Cat Bond — Global South View</text>
+  <text x="708" y="867" text-anchor="end" fill="#9C958C" font-size="9"
+    font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif">Conceptual only · not investment advice</text>
+</svg>

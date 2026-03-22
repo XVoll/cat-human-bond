@@ -1,0 +1,17 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Serve existing files and directories directly (assets, etc.)
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Don't rewrite requests to sub-apps
+  RewriteCond %{REQUEST_URI} ^/map/ [OR]
+  RewriteCond %{REQUEST_URI} ^/calculator/
+  RewriteRule ^ - [L]
+
+  # SPA fallback: all other paths go to schema's index.html
+  RewriteRule ^ /index.html [L]
+</IfModule>
